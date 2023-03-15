@@ -26,7 +26,7 @@
  #rm -rf package/lean/n2n_v2
  
  rm -rf package/lean/luci-theme-argon
- rm -rf package/lean/luci-app-argonne-config
+ rm -rf package/lean/luci-app-argon-config
  
 # ARM64: Add CPU model name in proc cpuinfo
 #wget -P target/linux/generic/pending-5.4 https://github.com/immortalwrt/immortalwrt/raw/master/target/linux/generic/hack-5.4/312-arm64-cpuinfo-Add-model-name-in-proc-cpuinfo-for-64bit-ta.patch
@@ -129,8 +129,8 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns packa
 
 
 
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-argonne package/luci-theme-argon
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-argonne-config package/luci-app-argon-config
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-argon package/luci-theme-argon
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-argon-config package/luci-app-argon-config
 
 
 
