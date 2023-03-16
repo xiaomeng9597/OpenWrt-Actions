@@ -26,10 +26,10 @@
  #rm -rf package/lean/n2n_v2
 
 
- rm -rf package/luci-theme-argon
- rm -rf package/lean/luci-theme-argon
- rm -rf themes/luci-theme-argon
- rm -rf feeds/luci/themes/luci-theme-argon
+ #rm -rf package/luci-theme-argon
+ #rm -rf package/lean/luci-theme-argon
+ #rm -rf themes/luci-theme-argon
+ #rm -rf feeds/luci/themes/luci-theme-argon
 
 
 
@@ -135,13 +135,15 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns packa
 
 
 
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argonne package/luci-theme-argonne
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argonne-config package/luci-app-argonne-config
+
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argonne package/luci-theme-argonne
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argonne-config package/luci-app-argonne-config
 
 
 
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argon package/luci-theme-argon
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argon-config package/luci-app-argon-config
+
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argon package/luci-theme-argon
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argon-config package/luci-app-argon-config
 
 
 
