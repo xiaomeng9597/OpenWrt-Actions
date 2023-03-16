@@ -148,7 +148,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argon-config p
 
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/gowebdav package/gowebdav
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-gowebdav package/luci-app-gowebdav
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fileassistant package/luci-app-fileassistant
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-fileassistant package/luci-app-fileassistant
 
 
 
