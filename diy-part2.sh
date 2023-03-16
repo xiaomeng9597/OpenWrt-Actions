@@ -135,9 +135,13 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns packa
 
 
 
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-argon package/luci-theme-argon
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-argon-config package/luci-app-argon-config
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argonne package/luci-theme-argonne
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argonne-config package/luci-app-argonne-config
 
+
+
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argon package/luci-theme-argon
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-argon-config package/luci-app-argon-config
 
 
 
