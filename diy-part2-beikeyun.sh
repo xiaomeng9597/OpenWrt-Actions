@@ -12,25 +12,34 @@
 
 
 
- rm -rf package/luci-theme-argon
- rm -rf package/lean/luci-theme-argon
- rm -rf themes/luci-theme-argon
- rm -rf feeds/luci/themes/luci-theme-argon
+# rm -rf package/luci-theme-argon
+# rm -rf package/lean/luci-theme-argon
+# rm -rf themes/luci-theme-argon
+# rm -rf feeds/luci/themes/luci-theme-argon
 
 
 
 
 # Modify default IP
 # sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-app-samba4/luci-app-samba/g' package/lean/autosamba/Makefile
 
 
 
 
 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+
+svn co https://github.com/thinktip/luci-theme-neobird/trunk package/luci-theme-neobird
+svn co https://github.com/Leo-Jo-My/luci-theme-opentomcat/trunk package/luci-theme-opentomcat
+
+# fix luci-theme-opentomcat dockerman icon missing
+rm -f package/luci-theme-opentomcat/files/htdocs/fonts/advancedtomato.woff
+cp $GITHUB_WORKSPACE/general/advancedtomato.woff package/luci-theme-opentomcat/files/htdocs/fonts
+sed -i 's/e025/e02c/g' package/luci-theme-opentomcat/files/htdocs/css/style.css
+sed -i 's/66CC00/00b2ee/g' package/luci-theme-opentomcat/files/htdocs/css/style.css
+
+
 
 
 
