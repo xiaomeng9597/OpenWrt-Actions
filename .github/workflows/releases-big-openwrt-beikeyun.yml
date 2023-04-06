@@ -68,7 +68,7 @@ jobs:
 
     - name: Package Armvirt as OpenWrt
       if: (!cancelled())
-      uses: ophub/flippy-openwrt-actions@main
+      uses: xiaomeng9597/flippy-openwrt-actions@main
       env:
         OPENWRT_ARMVIRT: https://github.com/xiaomeng9597/OpenWrt-Actions/releases/download/openwrt_armvirt-Beikeyun/openwrt-armvirt-64-default-rootfs.tar.gz
         PACKAGE_SOC: all
