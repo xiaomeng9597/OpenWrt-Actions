@@ -54,10 +54,6 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-
     - name: Clone source code
       working-directory: /workdir
       run: |
@@ -70,6 +66,12 @@ jobs:
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
 
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        
+        
     - name: Package Armvirt as OpenWrt
       if: (!cancelled())
       uses: xiaomeng9597/flippy-openwrt-actions@main
