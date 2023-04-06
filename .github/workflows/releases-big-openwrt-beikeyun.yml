@@ -65,13 +65,8 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
+        echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-        
-        
     - name: Package Armvirt as OpenWrt
       if: (!cancelled())
       uses: xiaomeng9597/flippy-openwrt-actions@main
@@ -107,7 +102,7 @@ jobs:
         name: R${{ env.DATE }} for ${{ env.FILE_NAME }}
         allowUpdates: true
         removeArtifacts: true
-        tag: ${{ env.FILE_NAME }}-${{ steps.date.outputs.date }}
+        tag: ${{ env.FILE_NAME }}-${{ outputs.date }}
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
