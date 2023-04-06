@@ -28,7 +28,7 @@ env:
   UPLOAD_RELEASE: true
   RECENT_LASTEST: 30
   TZ: Asia/Shanghai
-  FILE_NAME: ARMv8-Beikeyun
+  FILE_NAME: ARMv8-Beikeyun-23.4.7
   PRODUCT_NAME: ARMv8-Beikeyun
   TAGCS: '测试 123456'
 jobs:
@@ -106,7 +106,6 @@ jobs:
         token: ${{ secrets.RELEASES_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         body: |
-          - ${{ env.FILE_NAME }}
           - 默认IP：192.168.1.1 默认密码：password (WiFi密码同）
           - 当前使用版本:【编译前的最后一次➦[主源码](https://github.com/coolsnowwolf/lede)更新记录】
           - 高大全版取消了➦[Node](https://github.com/breakings/OpenWrt/releases/download/openwrt_armvirt/node_v16.15.0-1_aarch64_cortex-a53.ipk)，目前仅➦[网易云解锁NodeJS](https://github.com/breakings/OpenWrt/releases/download/openwrt_armvirt/netease.tar.gz)版受影响，可单独下载ipk安装。
