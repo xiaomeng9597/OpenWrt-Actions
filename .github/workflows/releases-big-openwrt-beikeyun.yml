@@ -28,9 +28,9 @@ env:
   UPLOAD_RELEASE: true
   RECENT_LASTEST: 30
   TZ: Asia/Shanghai
-  FILE_NAME: ARMv8-Beikeyun-23.4.7
+  FILE_NAME: ARMv8-Beikeyun
   PRODUCT_NAME: ARMv8-Beikeyun
-  TAGCS: '测试 123456'
+  TAGCS: ARMv8-Beikeyun-$(date "+%Y-%m-%d")
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -101,7 +101,7 @@ jobs:
         name: R${{ env.DATE }} for ${{ env.FILE_NAME }}
         allowUpdates: true
         removeArtifacts: true
-        tag: ${{ env.FILE_NAME }}
+        tag: ${{ env.TAGCS }}
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
