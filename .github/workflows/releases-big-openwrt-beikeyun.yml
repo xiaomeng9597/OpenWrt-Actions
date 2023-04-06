@@ -65,7 +65,7 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
-        echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        echo "tagdate=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
 
     - name: Package Armvirt as OpenWrt
       if: (!cancelled())
@@ -102,7 +102,7 @@ jobs:
         name: R${{ env.DATE }} for ${{ env.FILE_NAME }}
         allowUpdates: true
         removeArtifacts: true
-        tag: ${{ env.FILE_NAME }}-${{ outputs.date }}
+        tag: ${{ env.FILE_NAME }}-${{ env.tagdate }}
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
