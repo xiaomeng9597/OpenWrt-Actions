@@ -94,6 +94,9 @@ sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=2.16.0/g' feeds/packages/utils/docker-com
 sed -i 's/PKG_HASH:=.*/PKG_HASH:=556dc59075280442128f5b45a8ff37638fb357c2a956bd751dd0ba747c93e71d/g' feeds/packages/utils/docker-compose/Makefile
 
 
+#wget -P feeds/luci/applications/luci-app-ttyd/luasrc/view/terminal/terminal.htm https://xiaomeng9597.github.io/terminal.htm
+
+
 
 
 
