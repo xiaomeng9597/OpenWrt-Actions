@@ -92,6 +92,7 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
+        echo "tagdate=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
         
     #- name: Cache Toolchain
       #uses: klever1988/cachewrtbuild@main
@@ -192,7 +193,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}
+        tag: ${{ env.FILE_NAME }}-${{ env.tagdate }}
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
