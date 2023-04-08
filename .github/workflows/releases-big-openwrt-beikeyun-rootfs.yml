@@ -21,7 +21,7 @@ env:
   REPO_URL: https://github.com/xiaomeng9597/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ARMv8/lede-beikeyun.config
+  CONFIG_FILE: ARMv8/lede-beikeyun-rootfs.config
   DIY_P1_SH: diy-part1-beikeyun.sh
   DIY_P2_SH: diy-part2-beikeyun.sh
   UPLOAD_FIRMWARE: false
