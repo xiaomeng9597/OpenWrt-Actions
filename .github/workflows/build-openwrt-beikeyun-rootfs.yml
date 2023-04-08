@@ -32,8 +32,8 @@ env:
   UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: openwrt_armvirt-Beikeyun
-  PRODUCT_NAME: openwrt_armvirt-Beikeyun
+  FILE_NAME: openwrt_armvirt-Beikeyun-rootfs
+  PRODUCT_NAME: openwrt_armvirt-Beikeyun-rootfs
 
 jobs:
   build:
@@ -193,7 +193,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}-${{ env.tagdate }}
+        tag: ${{ env.FILE_NAME }}
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
