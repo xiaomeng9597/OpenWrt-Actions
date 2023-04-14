@@ -18,7 +18,7 @@ on:
     - cron: '45 23 * * *'
 
 env:
-  REPO_URL: https://github.com/xiaomeng9597/lede
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ARMv8/lede-beikeyun.config
